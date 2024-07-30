@@ -79,7 +79,7 @@ const IncrementTracker = () => {
       </div>
     )) : (
       <div className=''>
-        Hello start track your daily workout reps today.
+        Hello, start track your daily workout reps today.
       </div>
     );
   };
