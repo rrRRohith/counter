@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Settings from './Settings';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const IncrementTracker = () => {
   const [data, setData] = useState({});
@@ -95,6 +97,8 @@ const IncrementTracker = () => {
   };
 
   return (
+    <>
+    <Settings></Settings>
     <div className='container py-5 min-height-100vh position-relative'>
       <div className='border-1 border border-start-0 border-top-0 border-end-0 border-dark fs-5 bg-black w-100 text-light start-0 py-3 position-fixed top-0'>
         <div className='container d-flex align-items-center'>
@@ -103,6 +107,9 @@ const IncrementTracker = () => {
           </div>
           <div className='ms-auto btn btn-dark rounded-1 fw-semibold'>
             <span className='small fw-normal'>Total reps</span>. {calculateTotalReps()}
+          </div>
+          <div data-bs-toggle="modal" data-bs-target="#settingsModal" className='ms-2 btn btn-dark rounded-1 fw-semibold'>
+            <i class="bi bi-gear"></i>
           </div>
         </div>
       </div>
@@ -124,6 +131,7 @@ const IncrementTracker = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
